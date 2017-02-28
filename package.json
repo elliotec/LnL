@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Mike Elliott <me@michaelelliott.me>",
   "dependencies": {
+    "classnames": "^2.2.5",
+    "elemental": "^0.6.1",
     "front-matter": "^2.1.1",
     "gatsby": "^0.12.20",
     "highlight.js": "^9.8.0",
@@ -16,6 +18,7 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-sub": "^1.0.0",
     "object-assign": "^4.1.0",
+    "react-bootstrap": "^0.30.7",
     "react-helmet": "^3.2.2",
     "toml-js": "0.0.8"
   },
