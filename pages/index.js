@@ -31,12 +31,6 @@ export default class Index extends React.Component {
             <Link to={prefixLink('/react/')}>JSX (React components)</Link>
           </li>
           <li>
-            <Link to={prefixLink('/coffee-react/')}>CJSX (Coffeescript React components)</Link>
-          </li>
-          <li>
-            <Link to={prefixLink('/html/')}>HTML</Link>
-          </li>
-          <li>
             <Link to={prefixLink('/json/')}>JSON</Link>
           </li>
           <li>

@@ -5,7 +5,6 @@
   "author": "Mike Elliott <me@michaelelliott.me>",
   "dependencies": {
     "classnames": "^2.2.5",
-    "elemental": "^0.6.1",
     "front-matter": "^2.1.1",
     "gatsby": "^0.12.20",
     "highlight.js": "^9.8.0",
@@ -32,5 +31,11 @@
     "deploy": "gatsby build --prefix-links",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0"
   }
 }
