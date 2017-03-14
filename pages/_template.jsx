@@ -15,7 +15,6 @@ module.exports = React.createClass({
         <Link
           to={prefixLink('/')}
         >
-          Gatsby!!!
         </Link>
          {this.props.children}
       </div>

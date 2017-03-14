@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Helmet from 'react-helmet'
-import { config } from 'config'
-import { Button } from 'react-bootstrap';
+import React from 'react';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import Helmet from 'react-helmet';
+import { config } from 'config';
+import Header from 'components/Header';
 
 export default class Index extends React.Component {
   render () {
@@ -16,13 +16,13 @@ export default class Index extends React.Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
+        <Header />
         <h1>
           Hi MIIIKE
         </h1>
         <p>Welcome to your new Gatsby site</p>
         <h2>Below are some pages showing different capabilities built-in to Gatsby</h2>
         <h3>Supported file types</h3>
-        <Button bsSize="large">I'm a button!</Button>
         <ul>
           <li>
             <Link to={prefixLink('/markdown/')}>Markdown</Link>
