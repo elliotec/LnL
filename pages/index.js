@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import Header from 'components/Header';
+import Hero from 'components/Hero';
 
 export default class Index extends React.Component {
   render () {
@@ -17,12 +18,7 @@ export default class Index extends React.Component {
           ]}
         />
         <Header />
-        <h1>
-          Hi MIIIKE
-        </h1>
-        <p>Welcome to your new Gatsby site</p>
-        <h2>Below are some pages showing different capabilities built-in to Gatsby</h2>
-        <h3>Supported file types</h3>
+        <Hero />
         <ul>
           <li>
             <Link to={prefixLink('/markdown/')}>Markdown</Link>
