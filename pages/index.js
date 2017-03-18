@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 import { config } from 'config';
-import Header from 'components/Header';
 import Hero from 'components/Hero';
 
 export default class Index extends React.Component {
@@ -17,7 +16,6 @@ export default class Index extends React.Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-        <Header />
         <Hero />
         <h1>
           Hi Sara!
