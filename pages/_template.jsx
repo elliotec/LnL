@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import '../css/markdown-styles'
-import Header from 'components/Header';
+import Header from 'components/Header/Header.js';
 const CONTENTFUL_ACCESS_TOKEN = 'f64d0cedb314e6d19f7cc0fdc8757de534bbcea00eaa825ede3e8072f631cb41';
 
 module.exports = React.createClass({
