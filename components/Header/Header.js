@@ -6,12 +6,12 @@ import {
   NavDropdown,
   MenuItem
 } from 'react-bootstrap';
-import menu from './styles.css';
+import './Header.css';
 
 export default class Header extends React.Component {
   render() {
     return (
-      <Navbar className={menu} collapseOnSelect>
+      <Navbar className="header-menu" collapseOnSelect>
          <Navbar.Header>
            <Navbar.Brand>
              <a href="#">Lipstick n' Lace etc.</a>
