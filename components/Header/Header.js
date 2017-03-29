@@ -7,6 +7,7 @@ import {
   MenuItem
 } from 'react-bootstrap';
 import './Header.css';
+import logo from 'images/lnl.png';
 
 export default class Header extends React.Component {
   render() {
@@ -14,7 +15,9 @@ export default class Header extends React.Component {
       <Navbar className="header-menu" collapseOnSelect>
          <Navbar.Header>
            <Navbar.Brand>
-             <a href="#">Lipstick n' Lace etc.</a>
+             <a href="#">
+               <img src={logo} alt="logo"/>
+             </a>
            </Navbar.Brand>
            <Navbar.Toggle />
          </Navbar.Header>

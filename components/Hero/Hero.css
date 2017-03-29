@@ -1,0 +1,9 @@
+.hero {
+  background-image: url("../../images/flowersLips.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 550px;
+  width: 70%;
+  margin: 0 auto;
+}
