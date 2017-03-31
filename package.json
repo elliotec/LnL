@@ -3,8 +3,10 @@
   "description": "Lipstick n' Lace etc.",
   "version": "1.0.0",
   "author": "Mike Elliott <me@michaelelliott.me>",
+  "repository": "https://github.com/elliotec/LnL",
   "dependencies": {
     "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
     "front-matter": "^2.1.1",
     "gatsby": "^0.12.20",
     "highlight.js": "^9.8.0",
@@ -18,7 +20,9 @@
     "markdown-it-sub": "^1.0.0",
     "object-assign": "^4.1.0",
     "react-bootstrap": "^0.30.7",
+    "react-fontawesome": "^1.5.0",
     "react-helmet": "^3.2.2",
+    "react-icons": "^2.2.3",
     "toml-js": "0.0.8"
   },
   "keywords": [

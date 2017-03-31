@@ -31,6 +31,7 @@ module.exports = React.createClass({
           {head.title.toComponent()}
           {head.meta.toComponent()}
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
+          <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
           {css}
         </head>
         <body>

@@ -22,7 +22,7 @@ module.exports = React.createClass({
     return (
       <div>
         <Header />
-         {this.props.children}
+         {this.props.children} 
       </div>
     )
   }
