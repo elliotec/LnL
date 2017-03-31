@@ -1,1 +1,10 @@
-
+.logo {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+}
+.cart-button {
+  font-size: 25px;
+}
+.navbar {
+  margin: 0;
+}
