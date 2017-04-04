@@ -1,0 +1,16 @@
+.featured-grid {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.seasonal-and-bundle-products {
+  height: 100px;
+  background-color: blue;
+  border: 1px solid grey;
+}
+.bundle {
+  margin-top: 15px;
+}
+.sb-header {
+  font-family: 'Josefin Sans', sans-serif;
+}

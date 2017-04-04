@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import Hero from 'components/Hero/Hero';
+import SeasonalAndBundles from 'components/SeasonalAndBundles/SeasonalAndBundles';
 
 export default class Index extends React.Component {
   render () {
@@ -17,9 +18,7 @@ export default class Index extends React.Component {
           ]}
         />
         <Hero />
-        <h1>
-          Hi Sara!
-        </h1>
+        <SeasonalAndBundles />
         <ul>
           <li>
             <Link to={prefixLink('/markdown/')}>Markdown</Link>
