@@ -4,13 +4,24 @@
   margin-top: 15px;
 }
 .seasonal-and-bundle-products {
-  height: 100px;
-  background-color: blue;
-  border: 1px solid grey;
+  height: 150px;
+  border: 1px solid #b1b5bc;
+}
+.seasonal {
+  background-image: url('../../images/spring.jpg');
 }
 .bundle {
   margin-top: 15px;
+  background-image: url('../../images/icing.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  @media (min-width: 769px) {
+      margin-top: 0;
+  }
 }
 .sb-header {
   font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-size: 45px;
 }

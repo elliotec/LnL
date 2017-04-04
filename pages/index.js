@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import Hero from 'components/Hero/Hero';
 import SeasonalAndBundles from 'components/SeasonalAndBundles/SeasonalAndBundles';
+import Product from 'components/Product/Product';
 
 export default class Index extends React.Component {
   render () {
@@ -19,7 +20,8 @@ export default class Index extends React.Component {
         />
         <Hero />
         <SeasonalAndBundles />
-        <ul>
+        <Product />
+        {/* <ul>
           <li>
             <Link to={prefixLink('/markdown/')}>Markdown</Link>
           </li>
@@ -35,7 +37,7 @@ export default class Index extends React.Component {
           <li>
             <Link to={prefixLink('/less/')}>Less</Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     )
   }

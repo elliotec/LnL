@@ -1,0 +1,17 @@
+.product-container {
+  width: 200px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.product-pic {
+  background-image: url('../../images/productExample.png');
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+}
+.product-pic:hover {
+  background-image: url('../../images/lipColor.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
