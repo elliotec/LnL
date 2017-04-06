@@ -1,0 +1,24 @@
+.featured-products, .just-arrived {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.featured-flex, .arrived-flex {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+  }
+}
+.featured-products-header, .just-arrived-header {
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 55px;
+  margin-bottom: 20px;
+  font-size: 35px;
+}

@@ -31,15 +31,14 @@ module.exports = React.createClass({
           {head.title.toComponent()}
           {head.meta.toComponent()}
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
-          <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet" />
           {css}
         </head>
         <body>
             <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
             <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
-            <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
-            <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MjkwYmIwN2YtZTk4Yi00Zjc0LWFkMzUtN2FjNDI4NGIyYzQwNjM2MjMyNTgzMzI2MzEwMDgx"></script>
-
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+            <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="ZjBkMjgyM2MtYzc3MC00NGRjLTg4NzctMmQ4NTRkZWI5ODk0NjM2MjcxMDg3MzE2NjE5Njcw"></script>
             <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
         </body>
       </html>
