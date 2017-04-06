@@ -5,10 +5,20 @@ export default class Product extends React.Component {
   render () {
     return (
       <div className="product-container">
-        <div className="product-pic">
-        </div>
-        <h3>Color Name</h3>
-        <p>Texture: Matte</p>
+        <a
+            className="snipcart-add-item"
+            data-item-id="1"
+            data-item-name="Bacon"
+            data-item-price="3.00"
+            data-item-weight="20"
+            data-item-url="http://myapp.com/products/bacon"
+            data-item-description="Some fresh bacon">
+          <div className="product-image">
+          </div>
+          <h3 className="product-name">Blu Red</h3>
+          <p className="product-type">Texture: Matte</p>
+          <p className="product-price">$24.00</p>
+        </a>
       </div>
     );
   }

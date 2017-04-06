@@ -6,6 +6,8 @@ import { config } from 'config';
 import Hero from 'components/Hero/Hero';
 import SeasonalAndBundles from 'components/SeasonalAndBundles/SeasonalAndBundles';
 import Product from 'components/Product/Product';
+import FeaturedProducts from 'components/FeaturedProducts/FeaturedProducts';
+import JustArrived from 'components/JustArrived/JustArrived';
 
 export default class Index extends React.Component {
   render () {
@@ -20,7 +22,8 @@ export default class Index extends React.Component {
         />
         <Hero />
         <SeasonalAndBundles />
-        <Product />
+        <FeaturedProducts />
+        <JustArrived />
         {/* <ul>
           <li>
             <Link to={prefixLink('/markdown/')}>Markdown</Link>
