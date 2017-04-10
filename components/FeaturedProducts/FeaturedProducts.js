@@ -9,10 +9,12 @@ export default class FeaturedProducts extends React.Component {
       <section className="featured-products">
         <h2 className="featured-products-header">Featured Products</h2>
         <div className="featured-flex">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          {this.props.response.items.map(product =>
+              <Product
+                key={product.sys.id}
+                name={product.fields.productName}
+              />
+          )}
         </div>
       </section>
     );
