@@ -10,8 +10,11 @@
 }
 .fb-button {
   font-size: 25px;
-  margin-top: 15px;
-  float: right;
+
+  @media (min-width: 769px) {
+    float: right;
+    margin-top: 15px;
+  }
 }
 a {
 
