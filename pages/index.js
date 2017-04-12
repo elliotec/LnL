@@ -9,12 +9,11 @@ import Product from 'components/Product/Product';
 import FeaturedProducts from 'components/FeaturedProducts/FeaturedProducts';
 import JustArrived from 'components/JustArrived/JustArrived';
 
-
 export default class Index extends React.Component {
   render () {
     console.log(this.props.response);
     return (
-      !this.props.response ? <h1>loading</h1> :
+      !this.props.response ? <h1>Loading...</h1> :
         <div>
           <Helmet
             title={config.siteTitle}
