@@ -16,7 +16,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 export default class Header extends React.Component {
   render() {
     return (
-      <Navbar className="header-menu" collapseOnSelect>
+      <Navbar className="header-menu">
          <Navbar.Header>
            <Navbar.Brand>
              <a className="logo" href="#">
@@ -27,13 +27,13 @@ export default class Header extends React.Component {
          </Navbar.Header>
          <Navbar.Collapse>
            <Nav>
-             <LinkContainer to='/products/'>
+             <LinkContainer to='/products'>
                <NavItem className="nav-link">Products</NavItem>
              </LinkContainer>
-             <LinkContainer to='/about/'>
+             <LinkContainer to='/about'>
                <NavItem className="nav-link">About</NavItem>
              </LinkContainer>
-             <LinkContainer to='/how-to-use/'>
+             <LinkContainer to='/how-to-use'>
                <NavItem className="nav-link">How to Use</NavItem>
              </LinkContainer>
            </Nav>
