@@ -8,3 +8,14 @@
 .navbar {
   margin: 0;
 }
+.fb-button {
+  font-size: 25px;
+  margin-top: 15px;
+  float: right;
+}
+a {
+
+  & :hover {
+    text-decoration: none;
+  }
+}

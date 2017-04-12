@@ -8,6 +8,9 @@ import {
 } from 'react-bootstrap';
 import './Header.css';
 import FaShoppingCart from 'react-icons/lib/fa/shopping-cart';
+import FaFacebookSquare from 'react-icons/lib/fa/facebook-square';
+import { Link } from 'react-router';
+import { LinkContainer } from 'react-router-bootstrap';
 
 
 export default class Header extends React.Component {
@@ -24,15 +27,24 @@ export default class Header extends React.Component {
          </Navbar.Header>
          <Navbar.Collapse>
            <Nav>
-             <NavItem eventKey={1} href="#">Products</NavItem>
-             <NavItem eventKey={2} href="#">About</NavItem>
-             <NavItem eventKey={3} href="#">How to Use</NavItem>
+             <LinkContainer to='/products/'>
+               <NavItem className="nav-link">Products</NavItem>
+             </LinkContainer>
+             <LinkContainer to='/about/'>
+               <NavItem className="nav-link">About</NavItem>
+             </LinkContainer>
+             <LinkContainer to='/how-to-use/'>
+               <NavItem className="nav-link">How to Use</NavItem>
+             </LinkContainer>
            </Nav>
            <Nav pullRight>
-             <NavItem eventKey={1} href="#">
+             <NavItem>
                <FaShoppingCart className='cart-button' />
              </NavItem>
            </Nav>
+           <a href="https://www.facebook.com/groups/1830648883849106/" target="_blank">
+              <FaFacebookSquare className='fb-button' />
+           </a>
          </Navbar.Collapse>
       </Navbar>
     );

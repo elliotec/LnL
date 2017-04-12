@@ -15,7 +15,7 @@ export default class Product extends React.Component {
             data-item-description="Some fresh bacon">
           <div className="product-image">
           </div>
-          <h3 className="product-name">Blu Red</h3>
+          <h3 className="product-name">{this.props.name}</h3>
           <p className="product-type">Texture: Matte</p>
           <p className="product-price">$24.00</p>
         </a>
