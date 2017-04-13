@@ -9,6 +9,7 @@
 }
 .seasonal {
   background-image: url('../../images/spring.jpg');
+  background-repeat: no-repeat;
 }
 .bundle {
   margin-top: 15px;
