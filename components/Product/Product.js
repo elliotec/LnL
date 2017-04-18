@@ -7,17 +7,16 @@ export default class Product extends React.Component {
       <div className="product-container">
         <a
             className="snipcart-add-item"
-            data-item-id="1"
-            data-item-name="Bacon"
-            data-item-price="3.00"
-            data-item-weight="20"
-            data-item-url="http://myapp.com/products/bacon"
-            data-item-description="Some fresh bacon">
+            data-item-id={this.props.id}
+            data-item-url={this.props.url}
+            data-item-name={this.props.name}
+            data-item-price={this.props.price}
+            data-item-description={this.props.productDescription}>
           <div className="product-image">
           </div>
           <h3 className="product-name">{this.props.name}</h3>
-          <p className="product-type">Texture: Matte</p>
-          <p className="product-price">$24.00</p>
+          <p className="product-type">{this.props.sizetypecolor}</p>
+          <p className="product-price">${this.props.price}</p>
         </a>
       </div>
     );

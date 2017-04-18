@@ -12,7 +12,13 @@ export default class FeaturedProducts extends React.Component {
           {this.props.response.items.map(product =>
               <Product
                 key={product.sys.id}
+                id={product.sys.id}
                 name={product.fields.productName}
+                productDescription={product.fields.productDescription}
+                quantity={product.fields.quantity}
+                sizetypecolor={product.fields.sizetypecolor}
+                imageId={product.fields.image[0].sys.id}
+                price={product.fields.price}
               />
           )}
         </div>
