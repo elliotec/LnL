@@ -5,12 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 
 const BUILD_TIME = new Date().getTime()
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      body: React.PropTypes.string,
-    }
-  },
+export default class extends React.Component {
   render () {
     const head = Helmet.rewind()
 
@@ -43,5 +38,5 @@ module.exports = React.createClass({
         </body>
       </html>
     )
-  },
-})
+  }
+}
