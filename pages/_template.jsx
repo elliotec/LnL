@@ -61,11 +61,36 @@ function appReducer(state = {}, action = {}){
             isFetching: true
           }
         case RECEIVE_CONTENTFUL:
+          const oldContentfulItems = action.contentful.items;
+          const oldContentfulAssets = action.contentful.includes.Asset;
+          const productImages = oldContentfulAssets.reduce(
+            (assetsAccum, asset) => {
+              const assetId = asset.sys.id;
+              const imageUrl = asset.fields.file.url;
+              assetsAccum[assetId] = imageUrl;
+
+              return assetsAccum;
+            }, {}
+          );
+          const itemsWithImages = oldContentfulItems.map(
+            (item) => {
+              const imageId = item.fields.image[0].sys.id;
+
+              return {
+                  ...item,
+                  ...item.fields,
+                  imageUrl: productImages[imageId]
+              }
+            }
+          );
+
           return {
             ...state,
             isFetching: false,
             contentful: action.contentful,
-            lastUpdated: action.receivedAt
+            lastUpdated: action.receivedAt,
+            productImages,
+            itemsWithImages
           }
         default:
             return state
@@ -81,4 +106,3 @@ export default class App extends React.Component {
     )
   }
 }
-
