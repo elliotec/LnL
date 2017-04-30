@@ -20,7 +20,6 @@ class Index extends React.Component {
   }
   render () {
     return (
-      !this.props.contentful ? <h1>Loading...</h1> :
         <div>
           <Helmet
             title={config.siteTitle}
@@ -32,10 +31,14 @@ class Index extends React.Component {
           <Header />
           <Hero />
           <SeasonalAndBundles />
-          <FeaturedProducts
-            response={this.props.contentful}
-          />
-          <JustArrived />
+          { !this.props.products ? <h1>Loading...</h1> :
+            <div>
+              <FeaturedProducts
+                products={this.props.products}
+              />
+              <JustArrived />
+            </div>
+          }
           <Footer />
         </div>
     )
@@ -44,7 +47,7 @@ class Index extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    contentful: state.contentful
+    products: state.itemsWithImages
   }
 }
 // Connected Component

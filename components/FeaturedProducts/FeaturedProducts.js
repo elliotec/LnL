@@ -9,16 +9,16 @@ export default class FeaturedProducts extends React.Component {
       <section className="featured-products">
         <h2 className="featured-products-header">Featured Products</h2>
         <div className="featured-flex">
-          {this.props.response.items.map(product =>
+          {this.props.products.map(product =>
               <Product
                 key={product.sys.id}
                 id={product.sys.id}
-                name={product.fields.productName}
-                productDescription={product.fields.productDescription}
-                quantity={product.fields.quantity}
-                sizetypecolor={product.fields.sizetypecolor}
-                imageId={product.fields.image[0].sys.id}
-                price={product.fields.price}
+                name={product.productName}
+                productDescription={product.productDescription}
+                quantity={product.quantity}
+                sizetypecolor={product.sizetypecolor}
+                price={product.price}
+                imageUrl={product.imageUrl}
               />
           )}
         </div>

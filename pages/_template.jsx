@@ -55,11 +55,13 @@ export function fetchContentful() {
 
 function appReducer(state = {}, action = {}){
     switch (action.type){
+
         case REQUEST_CONTENTFUL:
           return {
             ...state,
             isFetching: true
           }
+          
         case RECEIVE_CONTENTFUL:
           const oldContentfulItems = action.contentful.items;
           const oldContentfulAssets = action.contentful.includes.Asset;
@@ -83,14 +85,21 @@ function appReducer(state = {}, action = {}){
               }
             }
           );
+          const featured = itemsWithImages.filter(
+            (item) => {
+              if(item.tags.includes('featured')){
+                return item;
+              }
+            }
+          );
 
           return {
             ...state,
             isFetching: false,
             contentful: action.contentful,
             lastUpdated: action.receivedAt,
-            productImages,
-            itemsWithImages
+            itemsWithImages,
+            featured
           }
         default:
             return state
