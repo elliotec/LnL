@@ -13,6 +13,7 @@ export default class Product extends React.Component {
             data-item-price={this.props.price}
             data-item-description={this.props.productDescription}>
           <div className="product-image">
+            <img height="150" src={this.props.imageUrl} alt="product image"/>
           </div>
           <h3 className="product-name">{this.props.name}</h3>
           <p className="product-type">{this.props.sizetypecolor}</p>
