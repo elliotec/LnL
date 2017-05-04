@@ -61,7 +61,7 @@ function appReducer(state = {}, action = {}){
             ...state,
             isFetching: true
           }
-          
+
         case RECEIVE_CONTENTFUL:
           const oldContentfulItems = action.contentful.items;
           const oldContentfulAssets = action.contentful.includes.Asset;
@@ -77,29 +77,37 @@ function appReducer(state = {}, action = {}){
           const itemsWithImages = oldContentfulItems.map(
             (item) => {
               const imageId = item.fields.image[0].sys.id;
+              const createdDateMilliseconds = Date.parse(item.sys.createdAt);
 
               return {
                   ...item,
                   ...item.fields,
-                  imageUrl: productImages[imageId]
+                  imageUrl: productImages[imageId],
+                  createdDateMilliseconds
               }
             }
           );
-          const featured = itemsWithImages.filter(
+          const includesFeaturedTag = itemsWithImages.filter(
             (item) => {
               if(item.tags.includes('featured')){
                 return item;
               }
             }
           );
+          const featured = includesFeaturedTag.slice(0,4);
+          const sortedProductsByDate = itemsWithImages.sort((a, b) => {
+            return b.createdDateMilliseconds - a.createdDateMilliseconds;
+          });
+          const justArrived = sortedProductsByDate.slice(0,4);
 
           return {
             ...state,
             isFetching: false,
             contentful: action.contentful,
             lastUpdated: action.receivedAt,
-            itemsWithImages,
-            featured
+            allProducts: itemsWithImages,
+            featured,
+            justArrived
           }
         default:
             return state
