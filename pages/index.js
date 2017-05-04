@@ -31,12 +31,14 @@ class Index extends React.Component {
           <Header />
           <Hero />
           <SeasonalAndBundles />
-          { !this.props.products ? <h1>Loading...</h1> :
+          { !this.props.allProducts ? <h1>Loading...</h1> :
             <div>
               <FeaturedProducts
-                products={this.props.products}
+                products={this.props.featured}
               />
-              <JustArrived />
+              <JustArrived
+                products={this.props.justArrived}
+              />
             </div>
           }
           <Footer />
@@ -47,7 +49,9 @@ class Index extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.itemsWithImages
+    allProducts: state.allProducts,
+    featured: state.featured,
+    justArrived: state.justArrived
   }
 }
 // Connected Component
