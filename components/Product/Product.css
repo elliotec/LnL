@@ -1,9 +1,9 @@
 .product-container {
-  width: 200px;
+  width: 213px;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   margin: 10px;
-
+  overflow: hidden;
 
   & a {
     color: black;
@@ -12,7 +12,7 @@
   }
 
   & .product-image {
-    width: 100%;
+    width: 213px;
     height: 150px;
   }
 
@@ -24,4 +24,9 @@
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
   }
+
+  & .product-name {
+    min-height: 52px;
+  }
+
 }
