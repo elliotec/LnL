@@ -11,8 +11,13 @@
   align-items: center;
   margin: 0 auto;
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1000px) {
+    flex-wrap: nowrap;
   }
 }
 .featured-products-header, .just-arrived-header {

@@ -8,7 +8,7 @@ export default class Product extends React.Component {
         <a
             className="snipcart-add-item"
             data-item-id={this.props.id}
-            data-item-url={this.props.url}
+            data-item-url={this.props.imageUrl}
             data-item-name={this.props.name}
             data-item-price={this.props.price}
             data-item-description={this.props.productDescription}>
