@@ -10,14 +10,16 @@
 .seasonal {
   background-image: url('../../images/spring.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .bundle {
   margin-top: 15px;
   background-image: url('../../images/icing.png');
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: cover;
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
       margin-top: 0;
   }
 }
@@ -25,4 +27,7 @@
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   font-size: 45px;
+}
+.sb-link:hover {
+  text-decoration: none;
 }
