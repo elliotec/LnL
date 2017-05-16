@@ -38,9 +38,11 @@ export default class Header extends React.Component {
              </LinkContainer>
            </Nav>
            <Nav pullRight>
-             <NavItem>
-               <FaShoppingCart className='cart-button' />
-             </NavItem>
+              <LinkContainer to="#" className="snipcart-checkout">
+                 <NavItem className="nav-link">
+                    <FaShoppingCart className='cart-button' />
+                 </NavItem>
+              </LinkContainer>
            </Nav>
            <a href="https://www.facebook.com/groups/1830648883849106/" target="_blank">
               <FaFacebookSquare className='fb-button' />
