@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 const contentfulApiUrl = `https://cdn.contentful.com/spaces/jg5tu42w97lj/entries?access_token=${config.contentfulAccessToken}`;
 import Products from 'pages/products';
+import { Router, Route } from 'react-router';
 
 // Action Types
 const RECEIVE_CONTENTFUL = 'RECEIVE_CONTENTFUL';
@@ -133,7 +134,7 @@ export default class App extends React.Component {
   render () {
     return (
         <Provider store={store} >
-            <Index />
+          {this.props.children}
         </Provider>
     )
   }
