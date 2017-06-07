@@ -1,13 +1,13 @@
-.featured-products, .just-arrived {
+.featured-products, .just-arrived, .seasonal-products {
   width: 80%;
   text-align: center;
   margin: 0 auto;
 }
-.featured-flex, .arrived-flex {
+.featured-flex, .arrived-flex, .seasonal-flex {
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
 
@@ -20,7 +20,7 @@
     flex-wrap: nowrap;
   }
 }
-.featured-products-header, .just-arrived-header {
+.featured-products-header, .just-arrived-header, .seasonal-products-header {
   width: 100%;
   font-family: 'Josefin Sans', sans-serif;
   margin-top: 55px;

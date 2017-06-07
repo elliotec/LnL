@@ -7,6 +7,8 @@ import thunkMiddleware from 'redux-thunk'
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 const contentfulApiUrl = `https://cdn.contentful.com/spaces/jg5tu42w97lj/entries?access_token=${config.contentfulAccessToken}`;
+import Products from 'pages/products';
+import { Router, Route } from 'react-router';
 
 // Action Types
 const RECEIVE_CONTENTFUL = 'RECEIVE_CONTENTFUL';
@@ -95,10 +97,22 @@ function appReducer(state = {}, action = {}){
             }
           );
           const featured = includesFeaturedTag.slice(0,4);
+
           const sortedProductsByDate = itemsWithImages.sort((a, b) => {
             return b.createdDateMilliseconds - a.createdDateMilliseconds;
           });
+
           const justArrived = sortedProductsByDate.slice(0,4);
+
+          const includesSeasonalTag = itemsWithImages.filter(
+            (item) => {
+              if(item.tags.includes('seasonal')){
+                return item;
+              }
+            }
+          );
+
+          const seasonal = includesSeasonalTag;
 
           return {
             ...state,
@@ -107,8 +121,10 @@ function appReducer(state = {}, action = {}){
             lastUpdated: action.receivedAt,
             allProducts: itemsWithImages,
             featured,
-            justArrived
+            justArrived,
+            seasonal
           }
+
         default:
             return state
     }
@@ -118,7 +134,7 @@ export default class App extends React.Component {
   render () {
     return (
         <Provider store={store} >
-            <Index />
+          {this.props.children}
         </Provider>
     )
   }
