@@ -33,7 +33,7 @@ export default class Header extends React.Component {
              <LinkContainer to='/about/'>
                <NavItem className="nav-link">About</NavItem>
              </LinkContainer>
-             <LinkContainer to='/how-to-use/'>
+             <LinkContainer to='/howtouse/'>
                <NavItem className="nav-link">How to Use</NavItem>
              </LinkContainer>
            </Nav>

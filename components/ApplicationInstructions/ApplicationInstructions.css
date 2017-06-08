@@ -1,0 +1,9 @@
+.instruction-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.instructions {
+  width: 90%;
+  margin: 20px;
+}
