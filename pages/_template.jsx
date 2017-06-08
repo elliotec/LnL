@@ -114,6 +114,16 @@ function appReducer(state = {}, action = {}){
 
           const seasonal = includesSeasonalTag;
 
+          const includesBundleTag = itemsWithImages.filter(
+            (item) => {
+              if(item.tags.includes('bundle')){
+                return item;
+              }
+            }
+          );
+
+          const bundle = includesBundleTag;
+
           return {
             ...state,
             isFetching: false,
@@ -122,7 +132,8 @@ function appReducer(state = {}, action = {}){
             allProducts: itemsWithImages,
             featured,
             justArrived,
-            seasonal
+            seasonal,
+            bundle
           }
 
         default:
