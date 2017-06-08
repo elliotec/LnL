@@ -10,7 +10,8 @@ import FeaturedProducts from 'components/FeaturedProducts/FeaturedProducts';
 import JustArrived from 'components/JustArrived/JustArrived';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
-import SeasonalProducts from 'components/SeasonalProducts/SeasonalProducts'
+import SeasonalProducts from 'components/SeasonalProducts/SeasonalProducts';
+import BundleProducts from 'components/BundleProducts/BundleProducts';
 
 class Index extends React.Component {
  constructor(props) {
@@ -43,6 +44,9 @@ class Index extends React.Component {
               <SeasonalProducts
                 products={this.props.seasonal}
               />
+              <BundleProducts
+                products={this.props.bundle}
+              />
             </div>
           }
           <Footer />
@@ -56,7 +60,8 @@ const mapStateToProps = (state) => {
     allProducts: state.allProducts,
     featured: state.featured,
     justArrived: state.justArrived,
-    seasonal: state.seasonal
+    seasonal: state.seasonal,
+    bundle: state.bundle
   }
 }
 // Connected Component
