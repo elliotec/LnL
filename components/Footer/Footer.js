@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
         <div className="footer-nav">
           <Link className="footer-link" to='products'>Products</Link>
           <Link className="footer-link" to='about'>About</Link>
-          <Link className="footer-link" to='how-to-use'>How to Use</Link>
+          <Link className="footer-link" to='howtouse'>How to Use</Link>
         </div>
         <div className="footer-flex">
           <a href="https://www.facebook.com/groups/1830648883849106/" target="_blank">
