@@ -91,7 +91,7 @@ function appReducer(state = {}, action = {}){
           );
           const includesFeaturedTag = itemsWithImages.filter(
             (item) => {
-              if(item.tags.includes('featured')){
+              if(item.tags && item.tags.includes('featured')){
                 return item;
               }
             }
@@ -106,7 +106,7 @@ function appReducer(state = {}, action = {}){
 
           const includesSeasonalTag = itemsWithImages.filter(
             (item) => {
-              if(item.tags.includes('seasonal')){
+              if(item.tags && item.tags.includes('seasonal')){
                 return item;
               }
             }
@@ -116,7 +116,7 @@ function appReducer(state = {}, action = {}){
 
           const includesBundleTag = itemsWithImages.filter(
             (item) => {
-              if(item.tags.includes('bundle')){
+              if(item.tags && item.tags.includes('bundle')){
                 return item;
               }
             }
