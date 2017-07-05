@@ -18,6 +18,7 @@
 
   & .product-type {
     margin-bottom: 0;
+    min-height: 40px;
   }
 
   & .product-price {

@@ -15,10 +15,6 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  @media (min-width: 1000px) {
-    flex-wrap: nowrap;
-  }
 }
 .featured-products-header, .just-arrived-header, .seasonal-products-header, .bundle-products-header {
   width: 100%;
