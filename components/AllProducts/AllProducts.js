@@ -3,12 +3,12 @@ import Product from 'components/Product/Product';
 import '../FeaturedProducts/FeaturedProducts.css';
 
 
-export default class BundleProducts extends React.Component {
+export default class SeasonalProducts extends React.Component {
   render () {
     return (
-      <section className="bundle-products">
-        <h2 id="bundle" className="bundle-products-header">Bundles</h2>
-        <div className="bundle-flex">
+      <section className="all-products">
+        <h2 className="all-products-header">All Products</h2>
+        <div className="all-flex">
           {this.props.products.map(product =>
               <Product
                 key={product.sys.id}

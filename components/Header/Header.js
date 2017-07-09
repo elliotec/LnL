@@ -11,7 +11,7 @@ import FaShoppingCart from 'react-icons/lib/fa/shopping-cart';
 import FaFacebookSquare from 'react-icons/lib/fa/facebook-square';
 import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
-
+import {onShowProductsPage} from 'pages/_template.jsx';
 
 export default class Header extends React.Component {
   render() {
@@ -27,9 +27,7 @@ export default class Header extends React.Component {
          </Navbar.Header>
          <Navbar.Collapse>
            <Nav>
-               <LinkContainer to='/products/'>
-               <NavItem className="nav-link">Products</NavItem>
-             </LinkContainer>
+             <NavItem onClick={ () => this.props.dispatch(onShowProductsPage()) } className="nav-link">Products</NavItem>
              <LinkContainer to='/about/'>
                <NavItem className="nav-link">About</NavItem>
              </LinkContainer>

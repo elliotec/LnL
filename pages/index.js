@@ -12,13 +12,17 @@ import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import SeasonalProducts from 'components/SeasonalProducts/SeasonalProducts';
 import BundleProducts from 'components/BundleProducts/BundleProducts';
+import Products from 'components/ProductsPage/Products';
+import {onShowProductsPage} from 'pages/_template.jsx';
 
 class Index extends React.Component {
  constructor(props) {
   super(props);
  }
   componentDidMount() {
-    this.props.dispatch(fetchContentful())
+    if (!this.props.allProducts) {
+       this.props.dispatch(fetchContentful());
+    }
   }
   render () {
     return (
@@ -30,26 +34,33 @@ class Index extends React.Component {
               {"name": "keywords", "content": "lipstick, beauty, lipsense"},
             ]}
           />
-          <Header />
-          <Hero />
-          <SeasonalAndBundles />
-          { !this.props.allProducts ? <h1>Loading...</h1> :
-            <div>
-              <FeaturedProducts
-                products={this.props.featured}
-              />
-              <JustArrived
-                products={this.props.justArrived}
-              />
-              <SeasonalProducts
-                products={this.props.seasonal}
-              />
-              <BundleProducts
-                products={this.props.bundle}
-              />
-            </div>
-          }
-          <Footer />
+          <Header
+            dispatch ={this.props.dispatch}
+          />
+          { this.props.shouldShowProductsPage ?
+            <Products
+              allProducts={this.props.allProducts}
+              seasonal={this.props.seasonal}
+              bundle={this.props.bundle}
+            /> :
+              <div>
+                <Hero />
+                <SeasonalAndBundles
+                  dispatch ={this.props.dispatch}
+                />
+                { !this.props.allProducts ? <h1>Loading...</h1> :
+                  <div>
+                    <FeaturedProducts
+                      products={this.props.featured}
+                    />
+                    <JustArrived
+                      products={this.props.justArrived}
+                    />
+                  </div>
+                }
+              </div>
+            }
+            <Footer />
         </div>
     )
   }
@@ -61,7 +72,8 @@ const mapStateToProps = (state) => {
     featured: state.featured,
     justArrived: state.justArrived,
     seasonal: state.seasonal,
-    bundle: state.bundle
+    bundle: state.bundle,
+    shouldShowProductsPage: state.shouldShowProductsPage
   }
 }
 // Connected Component
