@@ -23,3 +23,6 @@
   margin-bottom: 20px;
   font-size: 35px;
 }
+.hide-products {
+  display: none;
+}

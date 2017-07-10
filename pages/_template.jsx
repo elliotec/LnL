@@ -1,14 +1,14 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
-import Index from 'pages/index';
 import { config } from 'config';
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 const contentfulApiUrl = `https://cdn.contentful.com/spaces/jg5tu42w97lj/entries?access_token=${config.contentfulAccessToken}`;
-import Products from 'components/ProductsPage/Products';
 import { Router, Route } from 'react-router';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 
 // Action Types
 const RECEIVE_CONTENTFUL = 'RECEIVE_CONTENTFUL';
@@ -31,16 +31,6 @@ function configureStore(preloadedState) {
 const store = configureStore();
 
 // Action Creators
-function showProductsPage() {
-    return {
-        type: SHOW_PRODUCTS_PAGE
-    }
-}
-export function onShowProductsPage() {
-    return dispatch => {
-        dispatch(showProductsPage())
-    }
-}
 function requestContentful() {
     return {
         type: REQUEST_CONTENTFUL
@@ -69,12 +59,6 @@ export function fetchContentful() {
 
 function appReducer(state = {}, action = {}){
     switch (action.type){
-
-        case SHOW_PRODUCTS_PAGE:
-          return {
-            ...state,
-            shouldShowProductsPage: true
-          }
 
         case REQUEST_CONTENTFUL:
           return {
@@ -162,9 +146,13 @@ function appReducer(state = {}, action = {}){
 export default class App extends React.Component {
   render () {
     return (
+      <div>
+        <Header/>
         <Provider store={store} >
           {this.props.children}
         </Provider>
+        <Footer />
+      </div>
     )
   }
 }
