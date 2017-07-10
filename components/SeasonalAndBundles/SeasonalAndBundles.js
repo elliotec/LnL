@@ -13,16 +13,16 @@ export default class SeasonalAndBundles extends React.Component {
     return (
         <Grid className="featured-grid">
           <Row>
-            <span className="sb-link" onClick={ () => {this.props.dispatch(onShowProductsPage()); document.getElementById('seasonal').scrollIntoView();}}>
+            <a className="sb-link" href='/'>
               <Col className="seasonal-and-bundle-products seasonal" sm={5} smPull={1} smOffset={1}>
                 <h2 className="sb-header">Seasonal</h2>
               </Col>
-            </span>
-            <span className="sb-link" onClick={ () => {this.props.dispatch(onShowProductsPage()); document.getElementById('bundle').scrollIntoView();}}>
+            </a>
+            <a className="sb-link" href='/'>
               <Col className="seasonal-and-bundle-products bundle" sm={5} smPush={1}>
                 <h2 className="sb-header">Bundles</h2>
               </Col>
-            </span>
+            </a>
           </Row>
         </Grid>
     );
