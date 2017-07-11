@@ -7,7 +7,7 @@ export default class SeasonalProducts extends React.Component {
   render () {
     return (
       <section className="seasonal-products">
-        <h2 id="seasonal" className="seasonal-products-header">Seasonal Products</h2>
+        <h2 className="seasonal-products-header">Seasonal Products</h2>
         <div className="seasonal-flex">
           {this.props.products.map(product =>
               <Product

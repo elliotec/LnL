@@ -4,8 +4,15 @@ import SeasonalProducts from 'components/SeasonalProducts/SeasonalProducts';
 import BundleProducts from 'components/BundleProducts/BundleProducts';
 import AllProducts from 'components/AllProducts/AllProducts';
 import { connect } from 'react-redux';
+import { fetchContentful } from 'pages/_template.jsx';
 
 export class Products extends React.Component {
+  constructor(props) {
+   super(props);
+  }
+   componentDidMount() {
+       this.props.dispatch(fetchContentful());
+   }
     render () {
       return (
           <div>

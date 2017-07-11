@@ -14,11 +14,24 @@
   float: right;
 }
 a {
+  color: #777;
+  text-decoration: none !important;
 
   & :hover {
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
 .snipcart-checkout{
     background-color: none;
+}
+.logo {
+  list-style-type: none;
+
+   & :hover {
+     text-decoration: none;
+   }
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #f8f8f8;
 }

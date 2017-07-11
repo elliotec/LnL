@@ -7,7 +7,7 @@ export default class BundleProducts extends React.Component {
   render () {
     return (
       <section className="bundle-products">
-        <h2 id="bundle" className="bundle-products-header">Bundles</h2>
+        <h2 className="bundle-products-header">Bundles</h2>
         <div className="bundle-flex">
           {this.props.products.map(product =>
               <Product

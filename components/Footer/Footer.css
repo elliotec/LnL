@@ -15,7 +15,7 @@
 
   @media (min-width: 769px) {
     flex-direction: row;
-    width: 40%;
+    width: 90%;
     justify-content: space-around;
     margin-bottom: 0;
   }
