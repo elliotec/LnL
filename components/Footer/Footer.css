@@ -22,8 +22,15 @@
   align-self: flex-end;
 
   @media (min-width: 768px) {
-  
+
   }
+}
+.gully-link {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 .gully-logo {
   height: 50%;
@@ -39,16 +46,8 @@ p {
 }
 .gully-flex {
   width: 45%;
-  display: flex;
-  flex-direction: row;
   height: 40px;
-  align-items: flex-end;
-  justify-content: flex-end;
   order: 3;
-
-  @media (min-width: 768px) {
-
-  }
 }
 .footer-flex {
   display: flex;

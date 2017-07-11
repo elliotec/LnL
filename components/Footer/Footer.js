@@ -20,8 +20,10 @@ export default class Footer extends React.Component {
             <Link className="footer-link" to='/howtouse/'>How to Use</Link>
           </div>
           <div className="gully-flex">
+            <a className="gully-link" href="http://www.inthegully.com/" target="_blank">
             <p className="website-by">website by</p>
             <img src={inthegullyLogo} className="gully-logo" alt="inthegully logo"/>
+            </a>
           </div>
         </div>
       </div>
