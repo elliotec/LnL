@@ -1,24 +1,15 @@
 .footer {
   padding-top: 15px;
-  margin-bottom: 5px;
   border-top: 1px solid #e7e7e7;
   background-color: #f8f8f8;
+  padding-bottom: 5px;
 }
 .footer-nav {
   display: flex;
-  flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-
-  @media (min-width: 769px) {
-    flex-direction: row;
-    width: 90%;
-    justify-content: space-around;
-    margin-bottom: 0;
-  }
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer-link {
   color: grey;
@@ -26,9 +17,25 @@
 .footer-fb {
   margin: 2px;
 }
+.fb-container {
+  order: 3;
+  align-self: flex-end;
+
+  @media (min-width: 768px) {
+
+  }
+}
+.gully-link {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 .gully-logo {
   height: 50%;
-  widht: auto;
+  width: auto;
+  padding-right: 5px;
 }
 p {
   margin: 0;
@@ -39,16 +46,19 @@ p {
 }
 .gully-flex {
   width: 45%;
-  display: flex;
-  flex-direction: row;
   height: 40px;
-  align-items: flex-end;
-  justify-content: flex-end;
+  order: 3;
 }
 .footer-flex {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: space-around;
+  border-bottom: 1px solid #e7e7e7;
+  order: 1;
+  padding-bottom: 10px;
+
+  @media (min-width: 768px) {
+    border-bottom: none;
+  }
 }
