@@ -1,0 +1,29 @@
+.see-products-flex {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+.see-products {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../../images/icing.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  height: 200px;
+  padding: 20px;
+  border: 1px solid #b1b5bc;
+
+  @media (min-width: 768px) {
+      margin-top: 0;
+  }
+}
+.see-header {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-size: 45px;
+}
+.see-products-link:hover {
+  text-decoration: none;
+}

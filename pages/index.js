@@ -4,14 +4,11 @@ import { fetchContentful } from 'pages/_template.jsx';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import Products from 'pages/products';
-import '../components/FeaturedProducts/FeaturedProducts.css';
 import Hero from 'components/Hero/Hero';
-import SeasonalAndBundles from 'components/SeasonalAndBundles/SeasonalAndBundles';
 import Product from 'components/Product/Product';
 import FeaturedProducts from 'components/FeaturedProducts/FeaturedProducts';
 import JustArrived from 'components/JustArrived/JustArrived';
-import SeasonalProducts from 'components/SeasonalProducts/SeasonalProducts';
-import BundleProducts from 'components/BundleProducts/BundleProducts';
+import SeeAllProducts from 'components/SeeAllProducts/SeeAllProducts';
 
 export class Index extends React.Component {
   constructor(props) {
@@ -32,7 +29,6 @@ export class Index extends React.Component {
         />
         <div>
           <Hero />
-          <SeasonalAndBundles/>
           { !this.props.featured ? <h1>Loading...</h1> :
             <div>
               <FeaturedProducts
@@ -43,9 +39,7 @@ export class Index extends React.Component {
               />
             </div>
           }
-        </div>
-        <div className="hide-products">
-            <Products />
+          <SeeAllProducts />
         </div>
       </div>
     );

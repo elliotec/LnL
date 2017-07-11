@@ -9,14 +9,16 @@ export default class Footer extends React.Component {
     return (
       <div className="footer">
         <div className="footer-nav">
-          <Link className="footer-link" to='products'>Products</Link>
-          <Link className="footer-link" to='about'>About</Link>
-          <Link className="footer-link" to='howtouse'>How to Use</Link>
-        </div>
-        <div className="footer-flex">
-          <a href="https://www.facebook.com/groups/1830648883849106/" target="_blank">
-            <FaFacebookSquare className='fb-button footer-fb' />
-          </a>
+          <div className="fb-container">
+            <a href="https://www.facebook.com/groups/1830648883849106/" target="_blank">
+              <FaFacebookSquare className='fb-button footer-fb' />
+            </a>
+          </div>
+          <div className="footer-flex">
+            <Link className="footer-link" to='products'>Products</Link>
+            <Link className="footer-link" to='about'>About</Link>
+            <Link className="footer-link" to='howtouse'>How to Use</Link>
+          </div>
           <div className="gully-flex">
             <p className="website-by">website by</p>
             <img src={inthegullyLogo} className="gully-logo" alt="inthegully logo"/>
