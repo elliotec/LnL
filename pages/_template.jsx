@@ -149,7 +149,9 @@ export default class App extends React.Component {
       <div>
         <Header/>
         <Provider store={store} >
-          {this.props.children}
+            <div>
+                {this.props.children}
+            </div>
         </Provider>
         <Footer />
       </div>
