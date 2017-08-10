@@ -29,9 +29,9 @@ export default class Header extends React.Component {
              <LinkContainer to='/products/'>
                <NavItem className="nav-link">Products</NavItem>
              </LinkContainer>
-             <LinkContainer to='/about/'>
+             {/* <LinkContainer to='/about/'>
                <NavItem className="nav-link">About</NavItem>
-             </LinkContainer>
+             </LinkContainer> */}
              <LinkContainer to='/howtouse/'>
                <NavItem className="nav-link">How to Use</NavItem>
              </LinkContainer>
